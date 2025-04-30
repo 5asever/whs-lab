@@ -99,10 +99,10 @@ def print_bot_activity_details(suspected_users, user_comments):
             avg_gap = 0.0
 
         # 출력
-        print(f"[{i}] 봇 계정 {uid}({name})의 가동시기 분석")
-        print(f"[+] 가동 시작: {start:%m월%d일 %H시%M분}")
-        print(f"[+] 가동 종료: {end:%m월%d일 %H시%M분}")
-        print(f"[+] 평균 댓글 작성 간격: {avg_gap:.2f}분\n")
+        print(f"[{i}] 감지된 봇 계정: {uid} ({name})")
+        print(f" ├─ 활동 시작 시각 : {start:%m월 %d일 %H시 %M분}")
+        print(f" ├─ 활동 종료 시각 : {end:%m월 %d일 %H시 %M분}")
+        print(f" └─ 평균 댓글 간격 : 약 {avg_gap:.2f}분\n")
 
 # 분석 실행
 suspected_top2 = detect_suspected_bots(total_comments)
